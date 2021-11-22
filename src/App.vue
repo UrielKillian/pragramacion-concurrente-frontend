@@ -1,411 +1,82 @@
 <template>
-  <div>
-    <Disclosure
-      as="div"
-      class="relative bg-sky-700 pb-32 overflow-hidden"
-      v-slot="{ open }"
-    >
-      <div
-        aria-hidden="true"
-        :class="[
-          open ? 'bottom-0' : 'inset-y-0',
-          'absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0',
-        ]"
-      >
-        <div class="absolute inset-0 flex">
-          <div class="h-full w-1/2" style="background-color: #0a527b" />
-          <div class="h-full w-1/2" style="background-color: #065d8c" />
-        </div>
-        <div class="relative flex justify-center">
-          <svg
-            class="flex-shrink-0"
-            width="1750"
-            height="308"
-            viewBox="0 0 1750 308"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M284.161 308H1465.84L875.001 182.413 284.161 308z"
-              fill="#0369a1"
-            />
-            <path d="M1465.84 308L16.816 0H1750v308h-284.16z" fill="#065d8c" />
-            <path d="M1733.19 0L284.161 308H0V0h1733.19z" fill="#0a527b" />
-            <path
-              d="M875.001 182.413L1733.19 0H16.816l858.185 182.413z"
-              fill="#0a4f76"
-            />
-          </svg>
-        </div>
-      </div>
-      <header class="relative py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold text-white">Programación Concurrente</h1>
-        </div>
-      </header>
-    </Disclosure>
-
-    <main class="relative -mt-32">
-      <div class="max-w-screen-xl mx-auto pb-6 px-4 sm:px-6 lg:pb-16 lg:px-8">
-        <div class="bg-white rounded-lg shadow overflow-hidden">
-          <div
-            class="
-              divide-y divide-gray-200
-              lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x
-            "
-          >
-            <form
-              class="divide-y divide-gray-200 lg:col-span-9"
-              action="#"
-              method="POST"
-            >
-              <!-- Profile section -->
-              <div class="py-6 px-4 sm:p-6 lg:pb-8">
-                <div>
-                  <h2 class="text-lg leading-6 font-medium text-gray-900">
-                    Información
-                  </h2>
-                </div>
-
-                <div class="mt-6 flex flex-col lg:flex-row">
-                  <div class="flex-grow space-y-6">
-                    <div>
-                      <label
-                        for="about"
-                        class="block text-sm font-medium text-gray-700"
-                      >
-                        1. Test Input
-                      </label>
-                      <div class="mt-1">
-                        <textarea
-                          id="about"
-                          name="about"
-                          rows="3"
-                          class="
-                            shadow-sm
-                            focus:ring-sky-500 focus:border-sky-500
-                            mt-1
-                            block
-                            w-full
-                            sm:text-sm
-                            border border-gray-300
-                            rounded-md
-                          "
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mt-6 grid grid-cols-12 gap-6">
-                  <div class="col-span-12 sm:col-span-6">
-                    <label
-                      for="first-name"
-                      class="block text-sm font-medium text-gray-700"
-                      >Test Input</label
-                    >
-                    <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      autocomplete="given-name"
-                      class="
-                        mt-1
-                        block
-                        w-full
-                        border border-gray-300
-                        rounded-md
-                        shadow-sm
-                        py-2
-                        px-3
-                        focus:outline-none
-                        focus:ring-sky-500
-                        focus:border-sky-500
-                        sm:text-sm
-                      "
-                    />
-                  </div>
-
-                  <div class="col-span-12 sm:col-span-6">
-                    <label
-                      for="last-name"
-                      class="block text-sm font-medium text-gray-700"
-                      >Test Input</label
-                    >
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autocomplete="family-name"
-                      class="
-                        mt-1
-                        block
-                        w-full
-                        border border-gray-300
-                        rounded-md
-                        shadow-sm
-                        py-2
-                        px-3
-                        focus:outline-none
-                        focus:ring-sky-500
-                        focus:border-sky-500
-                        sm:text-sm
-                      "
-                    />
-                  </div>
-
-                  <div class="col-span-12">
-                    <label
-                      for="url"
-                      class="block text-sm font-medium text-gray-700"
-                      >Test Input</label
-                    >
-                    <input
-                      type="text"
-                      name="url"
-                      id="url"
-                      class="
-                        mt-1
-                        block
-                        w-full
-                        border border-gray-300
-                        rounded-md
-                        shadow-sm
-                        py-2
-                        px-3
-                        focus:outline-none
-                        focus:ring-sky-500
-                        focus:border-sky-500
-                        sm:text-sm
-                      "
-                    />
-                  </div>
-
-                  <div class="col-span-12 sm:col-span-6">
-                    <label
-                      for="company"
-                      class="block text-sm font-medium text-gray-700"
-                      >Test Input</label
-                    >
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      autocomplete="organization"
-                      class="
-                        mt-1
-                        block
-                        w-full
-                        border border-gray-300
-                        rounded-md
-                        shadow-sm
-                        py-2
-                        px-3
-                        focus:outline-none
-                        focus:ring-sky-500
-                        focus:border-sky-500
-                        sm:text-sm
-                      "
-                    />
-                  </div>
-                </div>
-              </div>
-            </form>
+<div>
+    <div class="relative min-h-screen  grid bg-black ">
+      <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 ">
+        <div  class="relative sm:w-1/2 xl:w-3/5 bg-blue-500 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden  text-white bg-no-repeat bg-cover relative" style="background-image: url(https://s03.s3c.es/imag/_v0/770x420/2/c/c/UCP-Monterrico-3.jpg);">
+          <div class="absolute bg-black  opacity-25 inset-0 z-0"></div>
+          <div class="w-full  lg:max-w-2xl md:max-w-md z-10 items-center text-center ">
+            <div class=" font-bold leading-tight mb-6 mx-auto w-full content-center items-center ">
+          
+            </div>
           </div>
         </div>
-      </div>
-      <div class="max-w-screen-xl mx-auto pb-6 px-4 sm:px-6 lg:pb-16 lg:px-8">
-        <div class="rounded-lg shadow overflow-hidden">
-          <div
-            class="
-              divide-y divide-gray-200
-              lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x
-            "
-          >
-            <form class="divide-y divide-gray-200 lg:col-span-9">
-              <!-- Profile section -->
-              <div class="py-6 px-4 sm:p-6 lg:pb-8">
-                <div class="py-6 px-4 sm:p-6 lg:pb-8">
-                  <div>
-                    <h2 class="text-lg leading-6 font-medium text-gray-900">
-                      Resultados
-                    </h2>
-                  </div>
 
-                  <div class="mt-6 flex flex-col lg:flex-row">
-                    <div class="flex-grow space-y-6">
-                      <div class="flex flex-col">
-                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                          <div
-                            class="
-                              py-2
-                              align-middle
-                              inline-block
-                              min-w-full
-                              sm:px-6
-                              lg:px-8
-                            "
-                          >
-                            <div
-                              class="
-                                shadow
-                                overflow-hidden
-                                border-b border-gray-200
-                                sm:rounded-lg
-                              "
-                            >
-                              <table
-                                class="min-w-full divide-y divide-gray-200"
-                              >
-                                <thead class="bg-gray-50">
-                                  <tr>
-                                    <th
-                                      scope="col"
-                                      class="
-                                        px-6
-                                        py-3
-                                        text-left text-xs
-                                        font-medium
-                                        text-gray-500
-                                        uppercase
-                                        tracking-wider
-                                      "
-                                    >
-                                      Name
-                                    </th>
-                                    <th
-                                      scope="col"
-                                      class="
-                                        px-6
-                                        py-3
-                                        text-left text-xs
-                                        font-medium
-                                        text-gray-500
-                                        uppercase
-                                        tracking-wider
-                                      "
-                                    >
-                                      Title
-                                    </th>
-                                    <th
-                                      scope="col"
-                                      class="
-                                        px-6
-                                        py-3
-                                        text-left text-xs
-                                        font-medium
-                                        text-gray-500
-                                        uppercase
-                                        tracking-wider
-                                      "
-                                    >
-                                      Email
-                                    </th>
-                                    <th
-                                      scope="col"
-                                      class="
-                                        px-6
-                                        py-3
-                                        text-left text-xs
-                                        font-medium
-                                        text-gray-500
-                                        uppercase
-                                        tracking-wider
-                                      "
-                                    >
-                                      Role
-                                    </th>
-                                    <th scope="col" class="relative px-6 py-3">
-                                      <span class="sr-only">Edit</span>
-                                    </th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr
-                                    v-for="(person, personIdx) in people"
-                                    :key="person.email"
-                                    :class="
-                                      personIdx % 2 === 0
-                                        ? 'bg-white'
-                                        : 'bg-gray-50'
-                                    "
-                                  >
-                                    <td
-                                      class="
-                                        px-6
-                                        py-4
-                                        whitespace-nowrap
-                                        text-sm
-                                        font-medium
-                                        text-gray-900
-                                      "
-                                    >
-                                      {{ person.name }}
-                                    </td>
-                                    <td
-                                      class="
-                                        px-6
-                                        py-4
-                                        whitespace-nowrap
-                                        text-sm text-gray-500
-                                      "
-                                    >
-                                      {{ person.title }}
-                                    </td>
-                                    <td
-                                      class="
-                                        px-6
-                                        py-4
-                                        whitespace-nowrap
-                                        text-sm text-gray-500
-                                      "
-                                    >
-                                      {{ person.email }}
-                                    </td>
-                                    <td
-                                      class="
-                                        px-6
-                                        py-4
-                                        whitespace-nowrap
-                                        text-sm text-gray-500
-                                      "
-                                    >
-                                      {{ person.role }}
-                                    </td>
-                                    <td
-                                      class="
-                                        px-6
-                                        py-4
-                                        whitespace-nowrap
-                                        text-right text-sm
-                                        font-medium
-                                      "
-                                    >
-                                      <a
-                                        href="#"
-                                        class="
-                                          text-indigo-600
-                                          hover:text-indigo-900
-                                        "
-                                        >Edit</a
-                                      >
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div class="md:flex md:items-center md:justify-left w-full sm:w-auto md:h-full xl:w-1/2 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none ">
+            <div class="max-w-xl w-full space-y-12">
+              <div class="lg:text-left text-center">
+          
+                <div class="flex items-center justify-center ">
+                  <div class="bg-black flex flex-col w-80 border border-white rounded-lg px-8 py-10">
+                  <form action="/" method="post">
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="first_name">Monóxido de Carbono (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="first_name" id="first_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Ácido Sulfhídrico (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Dióxido de Nitrógeno (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Ozono (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">PM10 (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">PM2,5 (ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Dióxido de Azufre(ug/m3)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Ruido (dB)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">UV</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Humedad (%)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-sm text-white" for="last_name">Presión (hPa)</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="last_name" id="last_name">
+            </div>
+            
+            <button class="block bg-green-400 hover:bg-green-600 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Enviar</button>
+        </form>
+          
                 </div>
-              </div>
-            </form>
-          </div>
+                </div>
+              
+            </div>
+              
+            </div>
         </div>
       </div>
-    </main>
+    </div>
   </div>
+
 </template>
 
 <script>
